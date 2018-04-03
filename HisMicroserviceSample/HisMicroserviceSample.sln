@@ -18,6 +18,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService", "Services\AuthenticationService\AuthenticationService.csproj", "{1E829B2D-1669-4F7E-A915-808EFEC6E0AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{C1848419-7D49-4877-A915-409EFECD2128}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\HisMicroserviceSample开发文档.docx = Doc\HisMicroserviceSample开发文档.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
