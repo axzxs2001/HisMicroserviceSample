@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace PharmacyServices
+namespace InvoicingService
 {
     public class Program
     {
@@ -19,7 +19,6 @@ namespace PharmacyServices
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:6801")
                 .UseStartup<Startup>()
                 .Build();
     }
