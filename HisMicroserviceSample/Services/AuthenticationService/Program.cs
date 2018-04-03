@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace OutpatientService
+namespace AuthenticationService
 {
     public class Program
     {
@@ -19,7 +19,7 @@ namespace OutpatientService
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:6803")
+                .UseUrls("http://*:6800")
                 .UseStartup<Startup>()
                 .Build();
     }

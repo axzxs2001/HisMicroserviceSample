@@ -19,6 +19,7 @@ namespace BasicsService
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:6801")
                 .UseStartup<Startup>()
                 .Build();
     }

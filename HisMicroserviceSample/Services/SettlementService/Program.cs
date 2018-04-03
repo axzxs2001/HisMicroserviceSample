@@ -19,6 +19,7 @@ namespace SettlementService
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:6805")
                 .UseStartup<Startup>()
                 .Build();
     }

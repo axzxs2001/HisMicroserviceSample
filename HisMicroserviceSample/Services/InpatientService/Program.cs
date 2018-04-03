@@ -19,6 +19,7 @@ namespace InpatientService
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:6804")
                 .UseStartup<Startup>()
                 .Build();
     }
