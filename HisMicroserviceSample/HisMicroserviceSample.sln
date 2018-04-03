@@ -5,17 +5,19 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{853F75AD-6330-42E3-BCDC-F136B9411E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicingService", "Services\InvoicingService\InvoicingService.csproj", "{0CF1EF33-9DAE-44DE-A7C1-64A6712EEA5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoicingService", "Services\InvoicingService\InvoicingService.csproj", "{0CF1EF33-9DAE-44DE-A7C1-64A6712EEA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutpatientService", "Services\OutpatientService\OutpatientService.csproj", "{BB4007E8-7E2A-479E-A143-04C0FF02D092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutpatientService", "Services\OutpatientService\OutpatientService.csproj", "{BB4007E8-7E2A-479E-A143-04C0FF02D092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InpatientService", "Services\InpatientService\InpatientService.csproj", "{9C96F3FE-74AE-40AF-BE0C-AC0F84C34F79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InpatientService", "Services\InpatientService\InpatientService.csproj", "{9C96F3FE-74AE-40AF-BE0C-AC0F84C34F79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettlementService", "Services\SettlementService\SettlementService.csproj", "{A86E3492-B5AB-403F-ADC3-3BDC7B8DE7EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettlementService", "Services\SettlementService\SettlementService.csproj", "{A86E3492-B5AB-403F-ADC3-3BDC7B8DE7EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsService", "Services\BasicsService\BasicsService.csproj", "{CC24711C-F1CD-4D26-9C14-857CE86F3B21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicsService", "Services\BasicsService\BasicsService.csproj", "{CC24711C-F1CD-4D26-9C14-857CE86F3B21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "Services\AuthenticationService\AuthenticationService.csproj", "{1E829B2D-1669-4F7E-A915-808EFEC6E0AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService", "Services\AuthenticationService\AuthenticationService.csproj", "{1E829B2D-1669-4F7E-A915-808EFEC6E0AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{C1848419-7D49-4877-A915-409EFECD2128}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
