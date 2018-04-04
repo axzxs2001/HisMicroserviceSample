@@ -26,6 +26,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{276734A6-9ED7-4B6E-91E3-7E40ACBD6A67}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consul", "Consul", "{0A3F67CB-72AE-4E7B-9121-B079391038CD}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\Consul\consul.exe = Tools\Consul\consul.exe
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
