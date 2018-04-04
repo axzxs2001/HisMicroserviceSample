@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{C1848419-7D49-4877-A915-409EFECD2128}"
 	ProjectSection(SolutionItems) = preProject
 		Doc\HisMicroserviceSample开发文档.docx = Doc\HisMicroserviceSample开发文档.docx
+		Doc\基于.net core微服务.pptx = Doc\基于.net core微服务.pptx
 	EndProjectSection
 EndProject
 Global
