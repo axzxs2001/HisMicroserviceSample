@@ -13,7 +13,7 @@ namespace BasicsService.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "title", "BasicsService" };
         }
 
         // GET api/values/5
