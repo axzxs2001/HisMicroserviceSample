@@ -19,6 +19,7 @@ namespace OcelotGatewayService
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:6800")
                 .UseStartup<Startup>()
                 .Build();
     }
