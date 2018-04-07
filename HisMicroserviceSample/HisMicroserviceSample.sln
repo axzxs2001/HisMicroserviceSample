@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependProject", "DependProj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTAuthorizePolicy", "DependProject\JWTAuthorizePolicy\JWTAuthorizePolicy.csproj", "{67C5B4FC-F1ED-447E-823F-87F6FCD68C91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGatewayService", "Services\OcelotGatewayService\OcelotGatewayService.csproj", "{3C1D99CF-F643-487D-BC23-6F0186636A10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{67C5B4FC-F1ED-447E-823F-87F6FCD68C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67C5B4FC-F1ED-447E-823F-87F6FCD68C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67C5B4FC-F1ED-447E-823F-87F6FCD68C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1D99CF-F643-487D-BC23-6F0186636A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1D99CF-F643-487D-BC23-6F0186636A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1D99CF-F643-487D-BC23-6F0186636A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1D99CF-F643-487D-BC23-6F0186636A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{1E829B2D-1669-4F7E-A915-808EFEC6E0AD} = {853F75AD-6330-42E3-BCDC-F136B9411E43}
 		{0A3F67CB-72AE-4E7B-9121-B079391038CD} = {276734A6-9ED7-4B6E-91E3-7E40ACBD6A67}
 		{67C5B4FC-F1ED-447E-823F-87F6FCD68C91} = {D9E46A87-31DF-4851-ABE0-C70DA4D05AE0}
+		{3C1D99CF-F643-487D-BC23-6F0186636A10} = {853F75AD-6330-42E3-BCDC-F136B9411E43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2B23511-09CA-41B0-B1C2-F4550C9507DE}
