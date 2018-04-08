@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace OcelotGatewayService
 {
@@ -17,10 +18,27 @@ namespace OcelotGatewayService
             BuildWebHost(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+        {
+
+            IWebHostBuilder builder = new WebHostBuilder();
+            //注入WebHostBuilder
+            return builder.ConfigureServices(service =>
+            {
+                service.AddSingleton(builder);
+            })
+                //加载configuration配置文人年
+                .ConfigureAppConfiguration(conbuilder =>
+                {
+                    conbuilder.AddJsonFile("appsettings.json");
+                    conbuilder.AddJsonFile("configuration.json");
+                })
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseKestrel()
                 .UseUrls("http://*:6800")
                 .UseStartup<Startup>()
                 .Build();
+        }
     }
 }
+
