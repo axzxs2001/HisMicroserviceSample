@@ -4,22 +4,13 @@
     "id":"BasicsService",
     "name":"BasicsService",
     "tags":["BasicsService"],
-    "address": "127.0.0.1",
+    "address": "192.168.1.151",
     "port": 6801,
     "checks": [
     {
-	    "id":"lisapicheck001",
-	    "name":"lisapicheck001",
-        "http": "http://127.0.0.1:5002/health",
-        "interval": "10s",
-        "tls_skip_verify": false,
-        "method": "GET",  
-        "timeout": "1s"
-    },
-	   {
-	    "id":"lisapicheck003",
-	    "name":"lisapicheck003",
-        "http": "http://127.0.0.1:5002",
+	    "id":"BasicsServiceCheck",
+	    "name":"BasicsServiceCheck",
+        "http": "http://192.168.1.151:6801/health",
         "interval": "10s",
         "tls_skip_verify": false,
         "method": "GET",  
@@ -28,16 +19,16 @@
     ]
     },
     {
-    "id":"risapi001",
-    "name":"risapi",
-    "tags":["risapi"],
-    "address": "127.0.0.1",
-    "port": 5004,
+    "id":"InvoicingService",
+    "name":"InvoicingService",
+    "tags":["InvoicingService"],
+    "address": "192.168.1.151",
+    "port": 6802,
     "checks": [
     {
-	    "id":"risapicheck001",
-	    "name":"risapicheck001",
-        "http": "http://127.0.0.1:5004/health",
+	    "id":"InvoicingServiceCheck",
+	    "name":"InvoicingServiceCheck",
+        "http": "http://192.168.1.151:6802/health",
         "interval": "10s",
         "tls_skip_verify": false,
         "method": "GET",  
