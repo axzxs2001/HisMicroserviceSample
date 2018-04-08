@@ -4,13 +4,13 @@
     "id":"BasicsService",
     "name":"BasicsService",
     "tags":["BasicsService"],
-    "address": "192.168.1.151",
+    "address": "192.168.2.157",
     "port": 6801,
     "checks": [
     {
 	    "id":"BasicsServiceCheck",
 	    "name":"BasicsServiceCheck",
-        "http": "http://192.168.1.151:6801/health",
+        "http": "http://192.168.2.157:6801/health",
         "interval": "10s",
         "tls_skip_verify": false,
         "method": "GET",  
@@ -22,13 +22,13 @@
     "id":"InvoicingService",
     "name":"InvoicingService",
     "tags":["InvoicingService"],
-    "address": "192.168.1.151",
+    "address": "192.168.2.157",
     "port": 6802,
     "checks": [
     {
 	    "id":"InvoicingServiceCheck",
 	    "name":"InvoicingServiceCheck",
-        "http": "http://192.168.1.151:6802/health",
+        "http": "http://192.168.2.157:6802/health",
         "interval": "10s",
         "tls_skip_verify": false,
         "method": "GET",  
