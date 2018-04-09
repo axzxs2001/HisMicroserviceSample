@@ -13,7 +13,7 @@ namespace BasicsService.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "title", "BasicsService" };
+            return new string[] { "BasicsService", $"所在服务器：{Environment.MachineName}  OS:{Environment.OSVersion.VersionString }  时间：{DateTime.Now}" };
         }
 
         // GET api/values/5

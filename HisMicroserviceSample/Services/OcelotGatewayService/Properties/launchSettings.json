@@ -18,12 +18,12 @@
     },
     "OcelotGatewayService": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:58467/"
+      "applicationUrl": "http://localhost:6800/"
     }
   }
 }
