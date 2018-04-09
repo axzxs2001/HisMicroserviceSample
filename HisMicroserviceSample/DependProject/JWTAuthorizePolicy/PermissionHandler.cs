@@ -77,6 +77,11 @@ namespace JWTAuthorizePolicy
                             return;
                         }
                     }
+                    else
+                    {
+                        context.Fail();
+                        return;
+                    }
                     //判断过期时间
                     if (DateTime.Parse(httpContext.User.Claims.SingleOrDefault(s => s.Type == ClaimTypes.Expiration).Value) >= DateTime.Now)
                     {

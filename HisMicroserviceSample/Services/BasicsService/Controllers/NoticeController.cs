@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 
 namespace BasicsService.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class NoticeController : Controller
     {

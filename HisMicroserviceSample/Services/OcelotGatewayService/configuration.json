@@ -9,11 +9,11 @@
           "Port": 6801
         }
       ],
-      "UpstreamPathTemplate": "/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post" ],
-      "ServiceName": "BasicsService",
-      "LoadBalancer": "RoundRobin",
-      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/basics/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      //"ServiceName": "BasicsService",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
       "ReRouteIsCaseSensitive": false,
       "QoSOptions": {
         "ExceptionsAllowedBeforeBreaking": 3,
@@ -34,26 +34,84 @@
         "EnableRateLimiting": true,
         "Period": "1m",
         "PeriodTimespan": 15,
-        "Limit": 10
+        "Limit": 100
       }
     },
     {
-      "DownstreamPathTemplate": "/health",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6801
+          "Port": 6802
         }
-
       ],
-      "UpstreamPathTemplate": "/health",
-      "UpstreamHttpMethod": [ "Get", "Post" ],
-      "ServiceName": "BasicsService",
-      "LoadBalancer": "RoundRobin",
-      "UseServiceDiscovery": true,
-      "ReRouteIsCaseSensitive": false      
+      "UpstreamPathTemplate": "/invoicing/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      //"ServiceName": "InvoicingService",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
+      "ReRouteIsCaseSensitive": false,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": false,
+        "UseTracing": false
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [ "admin" ],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 15,
+        "Limit": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6806
+        }
+      ],
+      "UpstreamPathTemplate": "/authentication/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post","Delete","Put" ],
+      //"ServiceName": "AuthenticationService",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
+      "ReRouteIsCaseSensitive": false,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": false,
+        "UseTracing": false
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [ "admin" ],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 15,
+        "Limit": 100
+      }
     }
+
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {

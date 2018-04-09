@@ -18,12 +18,12 @@
     },
     "AuthenticationService": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:59979/"
+      "applicationUrl": "http://localhost:6806/"
     }
   }
 }

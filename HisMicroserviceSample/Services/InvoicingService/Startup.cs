@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using JWTAuthorizePolicy;
 
 namespace InvoicingService
 {
@@ -20,13 +21,23 @@ namespace InvoicingService
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+  
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //读取配置文件
+            var audienceConfig = Configuration.GetSection("Audience");
+            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Issuer"], audienceConfig["Secret"], "GSWBearer", "Permission", "no permission");
+            //这个集合模拟用户权限表,可从数据库中查询出来
+            var permission = new List<Permission> {
+                              new Permission {  Url="/", Name="system"},
+                              new Permission {  Url="/api/values", Name="system"}
+                          };
+            services.AddSingleton(permission);
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+  
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

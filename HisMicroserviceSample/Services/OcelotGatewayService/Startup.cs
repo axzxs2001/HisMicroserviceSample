@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using JWTAuthorizePolicy;
 
 namespace OcelotGatewayService
 {
@@ -25,8 +26,12 @@ namespace OcelotGatewayService
         
         public void ConfigureServices(IServiceCollection services)
         {
+            var audienceConfig = Configuration.GetSection("Audience");
+            //注入OcelotJwtBearer
+            services.AddOcelotJwtBearer(audienceConfig["Issuer"], audienceConfig["Issuer"], audienceConfig["Secret"], "GSWBearer");
+
             //注入Ocelot
-            services.AddOcelot(Configuration as ConfigurationRoot);
+            services.AddOcelot(Configuration);
         }
 
      
