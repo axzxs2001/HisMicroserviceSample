@@ -53,7 +53,7 @@ namespace JWTAuthorizePolicy
         }
 
         /// <summary>
-        /// 注入Ocelot jwt策略，在业务API应用中的Startup的ConfigureServices调用
+        /// 注入Ocelot jwt策略，在业务API服务应用中的Startup的ConfigureServices调用
         /// </summary>
         /// <param name="services">IServiceCollection</param>
         /// <param name="issuer">发行人</param>
@@ -113,7 +113,7 @@ namespace JWTAuthorizePolicy
          });
         }
         /// <summary>
-        /// 注放Token生成器参数，在token生成项目的Startup的ConfigureServices中使用
+        /// 注入Token生成器参数，在token生成项目的Startup的ConfigureServices中使用
         /// </summary>
         /// <param name="services">IServiceCollection</param>
         /// <param name="issuer">发行人</param>
