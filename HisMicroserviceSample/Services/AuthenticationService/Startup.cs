@@ -25,10 +25,8 @@ namespace AuthenticationService
         {
             var audienceConfig = Configuration.GetSection("Audience");
 
-            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Issuer"], audienceConfig["Secret"], "GSWBearer", "Permission", "/hisapi/denied");
-
             //注入OcelotJwtBearer
-            services.AddJTokenBuild(audienceConfig["Issuer"], audienceConfig["Issuer"], audienceConfig["Secret"], "/api/denied");
+            services.AddJTokenBuild(audienceConfig["Issuer"], audienceConfig["Audience"], audienceConfig["Secret"], "/api/denied");
             services.AddMvc();
         }
       

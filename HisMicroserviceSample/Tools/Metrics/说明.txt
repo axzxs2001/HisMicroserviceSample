@@ -1,0 +1,2 @@
+1、配置infuxdb
+2、用localhost:3000登录grafana,用户名和密码都是admin

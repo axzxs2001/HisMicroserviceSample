@@ -10,7 +10,7 @@ using JWTAuthorizePolicy;
 
 namespace AuthenticationService
 {
-    [Authorize("Permission")]
+    [AllowAnonymous]
     public class PermissionController : Controller
     {
         /// <summary>
@@ -21,7 +21,7 @@ namespace AuthenticationService
         {
             _requirement = requirement;
         }
-        [AllowAnonymous]
+    
         [HttpPost("/authapi/login")]
         public IActionResult Login(string username, string password)
         {

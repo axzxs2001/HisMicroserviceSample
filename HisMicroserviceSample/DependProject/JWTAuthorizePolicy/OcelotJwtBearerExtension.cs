@@ -113,7 +113,7 @@ namespace JWTAuthorizePolicy
          });
         }
         /// <summary>
-        /// 注入Token生成器参数，在token生成项目的Startup的ConfigureServices中使用
+        /// 注入验证项目的Startup ConfigureServices中使用
         /// </summary>
         /// <param name="services">IServiceCollection</param>
         /// <param name="issuer">发行人</param>

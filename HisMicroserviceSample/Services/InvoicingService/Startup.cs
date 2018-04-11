@@ -27,7 +27,7 @@ namespace InvoicingService
 
             //读取配置文件
             var audienceConfig = Configuration.GetSection("Audience");
-            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Issuer"], audienceConfig["Secret"], "GSWBearer", "Permission", "no permission");
+            services.AddOcelotPolicyJwtBearer(audienceConfig["Issuer"], audienceConfig["Audience"], audienceConfig["Secret"], "GSWBearer", "Permission", "no permission");
             //这个集合模拟用户权限表,可从数据库中查询出来
             var permission = new List<Permission> {
                               new Permission {  Url="/", Name="system"},
