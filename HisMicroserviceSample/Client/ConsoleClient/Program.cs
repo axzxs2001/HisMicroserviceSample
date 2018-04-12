@@ -74,11 +74,12 @@ namespace ConsoleClient
         }
         static dynamic AdminLogin()
         {
+      
             var loginClient = new RestClient(_url);
             var loginRequest = new RestRequest("/authentication/authapi/login", Method.POST);
             loginRequest.AddParameter("username", "gsw");
             loginRequest.AddParameter("password", "111111");
-            IRestResponse loginResponse = loginClient.Execute(loginRequest);
+            IRestResponse loginResponse=loginClient.Execute(loginRequest);        
             var loginContent = loginResponse.Content;
             Console.WriteLine(loginContent);
             return Newtonsoft.Json.JsonConvert.DeserializeObject(loginContent);
