@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using JWTAuthorizePolicy;
+using Exceptionless;
 
 namespace BasicsService
 {
@@ -21,7 +22,7 @@ namespace BasicsService
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -41,6 +42,11 @@ namespace BasicsService
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+            app.UseExceptionless(apiKey: "7NxQGzV60OKXpgLt0NsVL1nlLrdVBR9YMphYbXTc");
+            //app.UseExceptionless(Configuration);
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -58,6 +58,8 @@ namespace BasicsService.Controllers
                     {
 
                         client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                        
+
                         client.Connect("smtp.163.com", 25, false);
                         client.AuthenticationMechanisms.Remove("XOAUTH2");
                         client.Authenticate("gswmicroservice", "gsw790622");

@@ -1,0 +1,12 @@
+﻿# multi node configuration
+cluster.name: exceptionless
+action.destructive_requires_name: true
+action.auto_create_index: .security,.monitoring*,.watches,.triggered_watches,.watcher-history*
+bootstrap.memory_lock: true
+
+node.max_local_storage_nodes: 1
+gateway.expected_nodes: 3
+discovery.zen.minimum_master_nodes: 2
+discovery.zen.ping.unicast.hosts: [ 'node1', 'node2', 'node3' ]
+network.bind_host: [ '_site_', '_local_' ]
+network.publish_host: '_site_'
