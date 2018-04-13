@@ -43,8 +43,8 @@ namespace BasicsService
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
 
-            app.UseExceptionless(apiKey: "7NxQGzV60OKXpgLt0NsVL1nlLrdVBR9YMphYbXTc");
-            //app.UseExceptionless(Configuration);
+           app.UseExceptionless(apiKey: "OBNJBtn7I42oChWLhqiKM5CkJeNwZejfvWMS9m2L");
+             //app.UseExceptionless(Configuration);
 
 
             if (env.IsDevelopment())

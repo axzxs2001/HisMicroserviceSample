@@ -19,9 +19,9 @@ namespace BasicsService.Controllers
             #region Exceptionless测试
             try
             {
-                ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.Debu", Exceptionless.Logging.LogLevel.Debug);
-                ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.Error", Exceptionless.Logging.LogLevel.Error);
-                ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.fatal", Exceptionless.Logging.LogLevel.Fatal);
+                ExceptionlessClient.Default.SubmitLog("调试Exceptionless.Logging.LogLevel.Debu", Exceptionless.Logging.LogLevel.Debug);
+                ExceptionlessClient.Default.SubmitLog("错误Exceptionless.Logging.LogLevel.Error", Exceptionless.Logging.LogLevel.Error);
+                ExceptionlessClient.Default.SubmitLog("大错Exceptionless.Logging.LogLevel.fatal", Exceptionless.Logging.LogLevel.Fatal);
                 ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.Info", Exceptionless.Logging.LogLevel.Info);
                 ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.Off", Exceptionless.Logging.LogLevel.Off);
                 ExceptionlessClient.Default.SubmitLog(" Exceptionless.Logging.LogLevel.Other", Exceptionless.Logging.LogLevel.Other);
@@ -36,7 +36,7 @@ namespace BasicsService.Controllers
                 ExceptionlessClient.Default.SubmitNotFound("404 not found");
                 ExceptionlessClient.Default.SubmitException(new Exception("自定义异常"));
 
-                throw new Exception("throw的异常：" + DateTime.Now);
+                throw new DivideByZeroException("throw DivideByZeroException的异常：" + DateTime.Now);
             }
             catch (Exception exc)
             {
