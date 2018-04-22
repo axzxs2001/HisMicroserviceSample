@@ -11,8 +11,11 @@ This is a sample of HIS,it is microservice architecture.
 7. 认证服务	  AuthenticationService	         6806	    负责用户认证，通过返回token
 8. 后台服务 	BackgroundService	             6810	    负责后端的计划和后台任务
 
+### 课程
+课程链接：http://edu.51cto.com/course/13342.html
+《基于.net core微服务架构》：consul服务治理，ocelot API网关，JWTAuthgorizePolicy统一验证，Docker布署，App.Metrics运维监控，Exceptionless分布式日志，MassTransit+MQ基于补偿机制数据一致性，Jenkins持续化集成，Polly,Refit三方库；
 
-序号	课程	课时	说明
+#### 课程说明：
 1. 第一节	微服务概述	介绍微服务的基本概念，特点，以及一些微服务框架：Spring Cloud,k8s,Service Fabric
 2. 第二节	Consul服务治理	Consul作为服务治理的框架，本课讲解Consul的基本命令，配置文件，以及如何搭建运行一个Consul集群
 3. 第三节	Ocelot API网关  Ocelot是基于.net core的API网关，本课讲解Ocelot的基本配置，以及如何与Consul联合命名用，实现服务治理，负载均衡，限流，熔断等功能
